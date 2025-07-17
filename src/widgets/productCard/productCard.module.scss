@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.category {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.price {
+  font-weight: 700;
+  color: #0070f3;
+  font-size: 1.1rem;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #0070f3;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #005ac1;
+}
+
+@media (max-width: 600px) {
+  .image {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
