@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { useAuth } from '@/entities/user/model'; 
-import styles from './footer.module.scss';
+import React from "react";
+import { useAuth } from "@/entities/user/model";
+import styles from "./footer.module.scss";
 
 export const Footer = () => {
-  const user = useAuth();
+  const { user } = useAuth();
 
   const year = new Date().getFullYear();
 
@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <p>
         {year}
-        {user?.user?.email ? ` — Logged as ${user.user}` : ''}
+        {user?.email ? ` — Logged as ${user.firstName}` : ""}
       </p>
     </footer>
   );

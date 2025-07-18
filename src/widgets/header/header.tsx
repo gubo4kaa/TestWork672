@@ -19,20 +19,25 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        {!auth.user ? (
-          <Link href="/login" className={styles.link}>
-            Login
-          </Link>
-        ) : (
-          <div className={styles.userInfo}>
-            <span>
-              {auth.user?.firstName} {auth.user?.lastName}
-            </span>
-            <button onClick={logout} className={styles.logoutBtn}>
-              Logout
-            </button>
-          </div>
-        )}
+        <Link href={"/"} className={styles.logo}>
+          Logo
+        </Link>
+        <div>
+          {!auth.user ? (
+            <Link href="/login" className={styles.link}>
+              Login
+            </Link>
+          ) : (
+            <div className={styles.userInfo}>
+              <span>
+                {auth.user?.firstName} {auth.user?.lastName}
+              </span>
+              <button onClick={logout} className={styles.logoutBtn}>
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
       </nav>
     </header>
   );
