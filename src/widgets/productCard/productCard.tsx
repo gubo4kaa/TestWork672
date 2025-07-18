@@ -1,6 +1,7 @@
 import { Product } from '@/entities/product/types';
 import styles from './productCard.module.scss';
 import { useAuth } from '@/entities/user/model';
+import Image from 'next/image';
 
 
 interface Props {
@@ -12,7 +13,7 @@ export const ProductCard = ({ product }: Props) => {
 
   return (
     <div className={styles.card}>
-      <img className={styles.image} src={product.thumbnail} alt={product.title}/>
+      <Image className={styles.image} src={product.thumbnail} alt={product.title}/>
       <div className={styles.info}>
         <h3 className={styles.title}>{product.title}</h3>
         <p className={styles.category}>{product.category}</p>

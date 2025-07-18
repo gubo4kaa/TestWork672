@@ -25,6 +25,7 @@ export const useLogin = () => {
       auth.login(user, token);
       router.push('/');
     } catch (err) {
+      console.log(err)
       setError('Неверные логин или пароль');
     } finally {
       setLoading(false);

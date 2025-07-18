@@ -20,6 +20,7 @@ export const useProductStore = create<ProductState>((set) => ({
       const products = await fetchProducts();
       set({ products });
     } catch (err) {
+      console.log(err)
       set({ error: 'Не удалось загрузить товары' });
     } finally {
       set({ loading: false });

@@ -7,7 +7,7 @@ export const useFetchProducts = () => {
 
   useEffect(() => {
     loadProducts();
-  }, []);
+  });
 
   return { products, loading, error };
 };
